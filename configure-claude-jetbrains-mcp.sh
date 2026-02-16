@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-CONFIG="$HOME/.claude/settings.json"
+CONFIG="$HOME/.claude.json"
 
 if [ -f "$CONFIG" ] && jq -e '.mcpServers.jetbrains' "$CONFIG" > /dev/null 2>&1; then
   echo "claude: JetBrains MCP server already configured, skipping"
